@@ -13,11 +13,11 @@
     </div>
 
     <div style="margin-top: 8px;">
-      This is done using a button onclick, which triggers an AJAX auth request. If the request succeeds, the form is submitted by javascript.
+      This attempt is done using a button onclick, which triggers an AJAX auth request. If the request succeeds, the form is submitted by javascript.
     </div>
 
     <div style="margin-top: 8px;">
-      It redirects away after a successful auth. There was not other way I could make chrome prompt to save the password
+      It redirects away after a successful auth. There was no other way I could make chrome prompt to save the password
     </div>
 
     <div style="margin-top: 8px; margin-bottom: 8px;">
@@ -30,21 +30,7 @@
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function(){
         var placeholder = document.getElementById('placeholder');
-        var template = `
-          <form id="fake-form" action="javascript:void(0)" method="POST">
-            <div>
-              <input type="email" placeholder="email" name="email" id="email">
-            </div>
-
-            <div>
-              <input type="password" placeholder="password" id="password">
-            </div>
-
-            <div>
-              <button id="form-submit" type="button">Submit</button>
-              <input type="submit" style="display:none">
-            </div>
-          </form>`;
+        var template = '<form id="fake-form" action="javascript:void(0)" method="POST"><div><input type="email" placeholder="email" name="email" id="email"></div><div><input type="password" placeholder="password" id="password"></div><div><button id="form-submit" type="button">Submit</button></div></form>';
 
         placeholder.innerHTML = template;
 
